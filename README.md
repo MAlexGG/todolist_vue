@@ -2,9 +2,9 @@
 Basic vue.js app, it's a crud that works for create, delete, read and update a task. Consumes a json file, with axios.
 
 ## Project setup
-
+```
 npm install
-
+```
 ### Compiles and hot-reloads for development
 
 npm run serve
