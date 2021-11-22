@@ -1,22 +1,24 @@
 import axios from 'axios'
-const baseURL =  "http://localhost:3000/todos"
+const baseURL = "http://localhost:3000/todos"
 
 export const courseService = {
-    getAll(){
+    getAll() {
         return axios.get(baseURL)
-},
-    createTodo(newTodo){
-        axios.post(baseURL,  {title: newTodo, 
-        isFinished: false})
+    },
+    createTodo(newTodo) {
+        axios.post(baseURL, {
+            title: newTodo,
+            isFinished: false
+        })
         return this.getAll()
 
     },
-    deleteTodo(id){
+    deleteTodo(id) {
         axios.delete(baseURL + "/" + id)
         return this.getAll()
     },
 
-    updateTodo(id, data){
+    updateTodo(id, data) {
         axios.put(baseURL + "/" + id, data)
         return this.getAll()
     }
